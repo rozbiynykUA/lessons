@@ -1,0 +1,111 @@
+@import url("reset.css");
+
+/* ---------------Header----------------- */
+.header {
+	color: blue;
+}
+.header-menu {
+	color: yellow;
+}
+.header-link {
+	color: aqua;
+}
+
+/* ---------------Know----------------- */
+.know-title {
+	color: red;
+}
+.know-text {
+	color: green;
+}
+
+/* ---------------Climate----------------- */
+.climate-title {
+	color: orange;
+}
+.climate-text {
+	color: purple;
+}
+
+/* ---------------Population----------------- */
+.population-title {
+	color: aquamarine;
+}
+.population-text {
+	color: greenyellow;
+}
+
+/* ---------------Religion----------------- */
+.religion-title {
+	color: sienna;
+}
+.religion-text {
+	color: darkgoldenrod;
+}
+
+/* ---------------Time----------------- */
+.time-title {
+	color: chartreuse;
+}
+.time-text {
+	color: darksalmon;
+}
+
+/* ---------------Transport----------------- */
+.transport-title {
+	color: darkslategray;
+}
+.transport-text {
+	color: firebrick;
+}
+
+/* ---------------Kitchen----------------- */
+.kitchen-title {
+	color: cornflowerblue;
+}
+.kitchen-text {
+	color: forestgreen;
+}
+
+/* ---------------Attractions----------------- */
+.attractions-title {
+	color: deeppink;
+}
+.attractions-text {
+	color: indianred;
+}
+
+/* ---------------Architecture----------------- */
+.architecture-title {
+	color: khaki;
+}
+.architecture-text {
+	color: darkred;
+}
+
+/* ---------------Footer----------------- */
+.footer-text {
+	color: midnightblue;
+}
+.footer-link {
+	color: chartreuse;
+}
+
+/* ---------------Combinations----------------- */
+[class*="text"] {
+	color: black;
+}
+.title,
+.text,
+.link {
+	color: red;
+}
+p.text {
+	color: darkolivegreen;
+}
+.footer-text a {
+	color: yellow;
+}
+.header-list a {
+	color: blue;
+}
