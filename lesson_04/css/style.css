@@ -1,0 +1,115 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap');
+/* Підключення обнуляючого файлу */
+@import url("reset.css");
+/* Завдання по пройденому матеріалу */
+body {
+	font-family: "Open Sans", sans-serif;
+	color: #999;
+}
+.header-title {
+	font-family: 'vinnytsia_sansbold', serif;
+	font-size: 50px;
+}
+.title {
+	font-family: 'vinnytsia_sansbold', serif;
+	color: #000;
+	/* font-style: oblique; */
+	font-size: 30px;
+	/* text-align: center; */
+	text-shadow: 2px 2px 2px #999;
+}
+.text {
+	font-family: 'vinnytsia_sansregular', serif;
+	font-size: 20px;
+	color: #000;
+	/* text-align: center; */
+	/* text-align: justify; */
+	text-shadow: 2px 2px 2px #999;
+}
+.link {
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	color: forestgreen;
+	text-decoration: underline;
+	text-decoration-color: #000
+}
+.social-text {
+	text-transform: capitalize;
+}
+.fisical-text {
+	text-transform: uppercase;
+}
+.environment-text {
+	text-transform: lowercase;
+}
+.hunting-text {
+	line-height: 2;
+	letter-spacing: 2px;
+	word-spacing: 5px;
+}
+.header a {
+	color: red;
+}
+.footer a {
+	text-decoration: none;
+}
+
+/* Завдання зі скріншотів */
+.professional {
+	font-family: "Work Sans", sans-serif;
+}
+.professional-title {
+	font-weight: 600;
+	color: #132238;
+	font-size: 38px;
+	line-height: 50px;
+}
+.professional-text {
+	color: #556070;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.produkt {
+	font-family: "Roboto", sans-serif;
+}
+.produkt-title {
+	color: #091133;
+	font-size: 50px;
+	font-weight: 500;
+	line-height: 66px;
+	letter-spacing: 1px;
+}
+.produkt-text {
+	color: #505F98;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 30px;
+}
+
+.about {
+	font-family: "DM Sans", sans-serif;
+}
+.about-title {
+	color: #1E1B39;
+	font-size: 88px;
+	font-weight: 700;
+	line-height: 95px;
+}
+.about-text {
+	color: #474464;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 42px;
+}

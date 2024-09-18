@@ -1,0 +1,65 @@
+@font-face {
+	font-family: 'dimkinbold';
+	src: url('../fonts/dimkin_bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'dimkinregular';
+	src: url('../fonts/dimkin_regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'dimkinsemibold';
+	src: url('../fonts/dimkin_semibold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'zt_neue_ralewebold';
+	src: url('../fonts/ztneueralewe-bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'zt_neue_ralewemedium';
+	src: url('../fonts/ztneueralewe-medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'zt_neue_raleweregular';
+	src: url('../fonts/ztneueralewe-regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'zt_neue_ralewesemi_bold';
+	src: url('../fonts/ztneueralewe-semibold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'vinnytsia_sansbold';
+	src: url('../fonts/vinnytsiasansbold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'vinnytsia_sansregular';
+	src: url('../fonts/vinnytsiasansreg.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+
+}
