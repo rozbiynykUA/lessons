@@ -1,0 +1,286 @@
+/* Підключення шрифтів */
+@import url("https://fonts.googleapis.com/css?family=Alegreya:regular,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Epilogue:regular,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,600,700&display=swap");
+/* Підключення обнуляючого файлу */
+@import url("reset.css");
+/* Завдання по пройденому матеріалу */
+body {
+	font-family: "Alegreya", serif;
+	background: rgb(52, 25, 6);
+	color: #cfbc9f;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+.container {
+	max-width: 80%;
+	margin: 0 auto;
+	padding-inline: 15px;
+}
+.title {
+	font-weight: 600;
+	font-size: 60px;
+	text-shadow: 3px 3px 7px #f0b643;
+}
+.image img{
+	max-width: 80%;
+	border-radius: 50px 0px 50px 0px;
+	box-shadow: 0px 0px 15px 5px #f0b643;
+}
+.link {
+	font-size: 20px;
+}
+.text {
+	font-size: 18px;
+	text-shadow: 5px 5px 5px #f0b643;
+}
+/* Header */
+.header {
+	padding-block: 50px;
+	background: url('../img/header/01.jpg') center / cover no-repeat;
+}	
+.header-menu {
+	text-align: center;
+}
+.header-title {
+	font-size: 150px;
+	font-weight: 700;
+	letter-spacing: 5px;
+	line-height: 1.5;
+}
+.header-list {
+	margin-bottom: 100px;
+}
+.header-list li{
+	font-weight: 600;
+	display: inline-block;
+	border: 2px solid #000;
+	border-radius: 30px;
+	margin: 10px;
+	padding: 20px 10px 10px 10px;
+	background-color: #f0b643;
+	box-shadow: inset 0px 0px 10px 2px #000;
+}
+.header-link {
+	color: #706452;
+	margin-bottom: 15px;
+}
+/* Social */
+.social {
+	text-align: center;
+	padding-block: 30px;
+}
+.social-title {
+	margin-bottom: 40px;
+}
+.social-image {
+	margin-bottom: 20px;
+}
+.social-text {
+	text-align: left;
+}
+.social-text p {
+	margin-bottom: 5px;
+}
+/* Fisical */
+.fisical {
+	text-align: center;
+	padding-block: 30px;
+}
+.fisical-title {
+	margin-bottom: 40px;
+}
+.fisical-image {
+	margin-bottom: 20px;
+}
+.fisical-text {
+	text-align: left;
+}
+.fisical-text p {
+	margin-bottom: 5px;
+}
+/* Environment */
+.environment {
+	text-align: center;
+	padding-block: 30px;
+}
+.environment-title {
+	margin-bottom: 40px;
+}
+.environment-text {
+	text-align: left;
+}
+.environment-text p {
+	margin-bottom: 5px;
+}
+/* Hunting */
+.hunting {
+	text-align: center;
+	padding-block: 30px;
+}
+.hunting-title {
+	margin-bottom: 40px;
+}
+.hunting-image {
+	margin-bottom: 20px;
+}
+.hunting-text {
+	text-align: left;
+}
+.hunting-text p {
+	margin-bottom: 5px;
+}
+/* Reproduction */
+.reproduction {
+	text-align: center;
+	padding-block: 30px;
+}
+.reproduction-title {
+	margin-bottom: 40px;
+}
+.reproduction-image {
+	margin-bottom: 20px;
+}
+.reproduction-text {
+	text-align: left;
+}
+.reproduction-text p {
+	margin-bottom: 5px;
+}
+.reproduction-text span {
+	font-weight: 700;
+}
+/* Protection */
+.protection {
+	text-align: center;
+	padding-block: 30px;
+}
+.protection-title {
+	margin-bottom: 40px;
+}
+.protection-image {
+	margin-bottom: 20px;
+}
+.protection-text {
+	text-align: left;
+}
+.protection-text p {
+	margin-bottom: 5px;
+}
+/* Footer */
+.footer {
+	padding-block: 30px;
+}
+.footer-text p {
+	margin-bottom: 5px;
+}
+.footer-link {
+	color: #e69927;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+/* Скрін 01 */
+.look {
+	font-family: "Epilogue", sans-serif;
+	background: #FDF0E9;
+	padding-block: 50px;
+}
+.look-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-inline: 15px;
+}
+.look-contant {
+	display: inline-block;
+	margin-right: 150px;
+}
+.look-text {
+	max-width: 470px;
+	color: #391400;
+	font-size: 20px;
+	line-height: 1.6;
+	margin-bottom: 26px;
+}
+.look-subtitle {
+	color: #EF6D58;
+	text-transform: uppercase;
+	line-height: 2;
+	letter-spacing: 3px;
+	margin-bottom: 20px;
+}
+.look-title {
+	max-width: 397px;
+	color: #391400;
+	font-size: 56px;
+	font-weight: 800;
+	letter-spacing: -1px;
+	line-height: 1.14;
+	margin-bottom: 26px;
+}
+.look-list li{
+	color: rgba(57, 20, 0, 0.64);
+	line-height: 2;
+	background: url('../img/scrin-01/01.svg') left no-repeat;
+	padding-left: 48px;
+	padding-top: 2px;
+	margin-bottom: 16px;
+	min-height: 32px;
+}
+.look-image {
+	display: inline-block;
+	vertical-align: bottom;
+}
+.look-image img{
+	max-width: 529px;
+}
+/* Скрін 02 */
+.streaming {
+	font-family: "Manrope", sans-serif;
+	font-size: 18px;
+	color: #fff;
+	background-color: #141414;
+	text-align: center;
+}
+.streaming-container {
+	max-width: 1627px;
+	margin: 0 auto;
+	padding-inline: 15px;
+}
+.streaming-image {
+	padding-block: 195px;
+	background: linear-gradient(180deg, #141414 0%, rgba(20, 20, 20, 0.00) 100%), linear-gradient(180deg, rgba(20, 20, 20, 0.00) 0%, #141414 100%), url('../img/scrin-02/image-01.png')center / cover no-repeat, url('../img/scrin-02/02.png')center / cover no-repeat;
+	margin-bottom: -64px;
+}
+.streaming-image img {
+	max-width: 470px;
+}
+.streaming-content {
+	max-width: 1096px;
+	margin: 0 auto;
+}
+.streaming-title {
+	font-size: 58px;
+	font-weight: 700;
+	line-height: 1.5;
+	margin-bottom: 14px;
+}
+.streaming-text {
+	color: #999;
+	line-height: 1.5;
+	margin-bottom: 50px;
+}
+.streaming-button a{
+	min-width: 251px;
+	background: #E50000;
+	padding: 15px;
+	text-align: center;
+	border-radius: 8px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+.streaming-button span {
+	background: url('../img/scrin-02/icon-btn.png') left /28px no-repeat;
+	padding-left: 32px;
+}
