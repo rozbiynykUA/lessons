@@ -456,9 +456,6 @@ body {
 	background: #fff;
 	visibility: visible;
 }
-.block1:{
-	visibility: visible;
-}
 .block1:hover ~ .block2,
 .block2:hover {
 	visibility: visible;
