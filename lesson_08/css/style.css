@@ -1,0 +1,166 @@
+/* Підключення шрифтів */
+@import url("https://fonts.googleapis.com/css?family=Epilogue:regular,700,800,900&display=swap");
+/* Підключення обнуляючого файлу */
+@import url("reset.css");
+/* Завдання по пройденому матеріалу */
+body {
+	font-family: "Epilogue", sans-serif;
+	font-size: 24px;
+	line-height: 1.5;
+	letter-spacing: 2px;
+	color: #fff;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	background: url("../img/wrapper/stars.webp") center / cover no-repeat fixed;
+	padding-block: 50px;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-inline: 15px;
+}
+.title {
+	text-align: center;
+	font-size: 55px;
+	font-weight: 900;
+}
+.header-block-title,
+.home-block-title,
+.professional-block-title,
+.founder-block-title,
+.logotypes-block-title,
+.started-block-title,
+.footer-block-title {
+	text-align: center;
+	font-size: 35px;
+	font-weight: 800;
+	margin-bottom: 20px;
+}
+.header-block,
+.home-block,
+.professional-block,
+.founder-block,
+.logotypes-block,
+.started-block,
+.footer-block {
+	padding-block: 30px;
+	text-align: center;
+}
+.header-image,
+.home-image {
+	display: inline-block;
+	max-width: 20%;
+	vertical-align: middle;
+}
+.home-image img {
+	max-width: 100%;
+}
+.header-text,
+.home-text {
+	display: inline-block;
+	max-width: 70%;
+	padding-left: 10px;
+}
+.professional-image {
+	display: inline-block;
+}
+.professional-image img{
+	display: block;
+}
+.professional-image img:not(:last-child) {
+	margin-bottom: 15px;
+}
+.professional-text {
+	display: inline-block;
+	max-width: 70%;
+	padding-left: 10px;
+	vertical-align: top;
+}
+.professional-text P:first-child {
+	padding-top: 10px;
+}
+.professional-text P:last-child {
+	padding-top: 20px;
+}
+.founder-text {
+	background: url("../img/founder/apostrophe.svg") 21% 0 / 100px no-repeat;
+	min-height: 80px;
+	padding-left: 120px;
+	padding-top: 20px;
+}
+.logotypes-image {
+	display: inline-block;
+	max-width: 20%;
+}
+.logotypes-image img {
+	display: block;
+}
+.logotypes-image img:not(:last-child) {
+	margin-bottom: 20px;
+}
+.logotypes-text {
+	display: inline-block;
+	max-width: 70%;
+	padding-left: 10px;
+	vertical-align: top;
+}
+.logotypes-text p:nth-child(n+2) {
+	padding-top: 22px;
+}
+.logotypes-text p:last-child {
+	padding-top: 5px;
+}
+.started-image {
+	display: inline-block;
+	max-width: 20%;
+}
+.started-image img {
+	display: block;
+	max-width: 100%;
+	margin-left: auto;
+}
+.started-image img:not(:last-child) {
+	margin-bottom: 20px;
+}
+.started-image img:first-child {
+	margin-right: 25px;
+}
+.started-text {
+	display: inline-block;
+	max-width: 70%;
+	vertical-align: top;
+}
+.started-text p {
+	min-height: 100px;
+}
+.started-text p:last-child:before {
+	content: "";
+	width: 100px;
+	height: 100px;
+	background: url("../img/started/cloud.svg") 0% 100% / 100px no-repeat;
+	vertical-align: middle;
+	margin-left: -220px;
+	margin-right: 45px;
+}
+.footer-image {
+	display: inline-block;
+	max-width: 20%;
+	vertical-align: top;
+}
+.footer-image img {
+	display: block;
+	max-width: 100%;
+	padding-top: 8px;
+}
+.footer-image img:not(:last-child) {
+	margin-bottom: 30px;
+}
+.footer-text {
+	display: inline-block;
+	max-width: 70%;
+}
+.footer-text p:not(:first-child) {
+	padding-top: 15px;
+}
