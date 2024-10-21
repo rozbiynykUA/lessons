@@ -87,7 +87,7 @@ body {
 	transform: translate(10%, 10%);
 }
 .item__content--scale:hover {
-	transform: scale(50%, 50%);
+	transform: scale(0.5, 0.5);
 }
 .item__content--rotate:hover {
 	transform: rotate(45deg);
