@@ -82,17 +82,17 @@ body {
 	display: flex;
 	gap: 64px;
 }
-.header__item {
+.header__item a{
 	padding: 7px 25px;
 	line-height: 2;
 	border: 1px solid rgba(255, 255, 255, 0.0);
 	border-radius: 6px;
 	transition: all 0.3s ease-in-out;
 }
-.header__item:hover {
+.header__item a:hover {
 	border: 1px solid rgba(255, 255, 255, 0.30);
 }
-.header__item:active {
+.header__item a:active {
 	border: 1px solid rgba(255, 255, 255, 1);
 }
 /* Portfolio */
