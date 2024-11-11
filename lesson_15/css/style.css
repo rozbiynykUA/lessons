@@ -24,6 +24,41 @@ body {
 	margin: 0 auto;
 	padding-inline: 15px;
 }
+/* Header+Footer */
+.header__container,
+.footer__container {
+	padding-block-start: 50px;
+	text-align: center;
+}
+.footer__container {
+	padding-block-end: 50px;
+}
+.header__content,
+.footer__content {
+	display: inline-block;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 700;
+	padding: 30px;
+	border-radius: 12px;
+	border: 1px solid #262626;
+	background: #0F0F0F;
+	box-shadow: 5px 5px 10px #0F0F0F;
+}
+@media (max-width: 515px) {
+	.header__content,
+	.footer__content {
+		font-size: 24px;
+		padding: 15px;
+	}
+	.header__container,
+	.footer__container {
+		padding-block-start: 25px;
+	}
+	.footer__container {
+		padding-block-end: 25px;
+	}
+}
 /* Must-watch */
 .mast-watch {
 	padding-top: 50px;
@@ -53,24 +88,6 @@ body {
 	font-size: 38px;
 	font-weight: 700;
 }
-@media (max-width: 809px) {
-	.section-header {
-		text-align: center;
-		justify-content: center;
-	}
-}
-@media (max-width: 515px) {
-	.section-header__title {
-		font-size: 32px;
-		padding-top: 20px;
-	}
-	.mast-watch__container {
-		padding-inline: 15px;
-	}
-	.mast-watch__wrapper {
-		padding: 20px 15px;
-	}
-}
 .section-header__scroll {
 	flex: 0 0 257px;
 	display: flex;
@@ -91,6 +108,11 @@ body {
 	border: 1px solid #1F1F1F;
 	background: #1A1A1A;
 	background: url("../img/must-watch/vector-left.svg") center / 28px no-repeat;
+	transition: all 0.5s ease-in-out
+}
+.scroll__left:hover,
+.scroll__right:hover {
+	border: 1px solid #999;
 }
 .scroll__right {
 	transform: rotateY(180deg);
@@ -118,11 +140,6 @@ body {
 	flex-wrap: wrap;
 	gap: 20px;
 }
-@media (max-width: 1628px) {
-	.galery__items {
-		justify-content: space-evenly;
-	}
-}
 .galery__item {
 	padding: 20px;
 	flex: 0 1 359px;
@@ -132,6 +149,10 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	transition: all 0.5s ease-in-out
+}
+.galery__item:hover {
+	border: 1px solid #999;
 }
 .galery__image {
 	border-radius: 12px;
@@ -145,11 +166,6 @@ body {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: 20px;
-}
-@media (max-width: 382px) {
-	.galery__content {
-		gap: 10px;
-	}
 }
 .galery__duration {
 	flex: 0 1 110px;
@@ -198,6 +214,34 @@ body {
 .galery__vote {
 	flex: 1 1 26px;
 }
+@media (max-width: 1628px) {
+	.galery__items {
+		justify-content: space-evenly;
+	}
+}
+@media (max-width: 809px) {
+	.section-header {
+		text-align: center;
+		justify-content: center;
+	}
+}
+@media (max-width: 515px) {
+	.section-header__title {
+		font-size: 32px;
+		padding-top: 20px;
+	}
+	.mast-watch__container {
+		padding-inline: 15px;
+	}
+	.mast-watch__wrapper {
+		padding: 20px 15px;
+	}
+}
+@media (max-width: 382px) {
+	.galery__content {
+		gap: 10px;
+	}
+}
 /* Genres */
 .genres__wrapper {
 	position: relative;
@@ -229,23 +273,6 @@ body {
 	flex-wrap: wrap;
 	gap: 30px;
 }
-@media (max-width: 1628px) {
-	.genres__shelfs {
-		justify-content: space-evenly;
-	}
-}
-@media (max-width: 515px) {
-	.section-header__title {
-			text-align: center;
-			font-size: 32px;
-		}
-	.genres__container {
-		padding-inline: 15px;
-	}
-	.genres__content {
-		padding: 20px 15px;
-	}
-}
 .genres__shelf {
 	display: flex;
 	flex-direction: column;
@@ -255,15 +282,33 @@ body {
 	background: #1A1A1A;
 	padding: 30px;
 	flex: 0 1 275px;
+	position: relative;
+	transition: all 0.5s ease-in-out;
+}
+.genres__shelf:hover .shelf__wrapper::after{
+	background:none;
+}
+.genres__shelf:hover {
+	border: 1px solid #999;
 }
 .shelf__wrapper {
+	display: flex;
+}
+.shelf__wrapper::after {
+	content: "";
+	flex: 0 1 213px;
+	width: 213px;
+	height: 245px;
 	background: linear-gradient(180deg, rgba(26, 26, 26, 0.00) 0%, #1A1A1A 101.79%);
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	transition: all 0.5s ease-in-out;
 }
 .shelf__pictures {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 5px;
-	flex: 0 1 237px;
 }
 .shelf__card {
 	width: 48%;
@@ -284,4 +329,21 @@ body {
 	width: 30px;
 	height: 30px;
 	background: url("../img/genres/vector-right.svg") center / 30px no-repeat;
+}
+@media (max-width: 1628px) {
+	.genres__shelfs {
+		justify-content: space-evenly;
+	}
+}
+@media (max-width: 515px) {
+	.section-header__title {
+		text-align: center;
+		font-size: 32px;
+	}
+	.genres__container {
+		padding-inline: 15px;
+	}
+	.genres__content {
+		padding: 20px 15px;
+	}
 }
