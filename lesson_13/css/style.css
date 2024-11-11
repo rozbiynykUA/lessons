@@ -170,7 +170,7 @@ body {
 	border-radius: 6px;
 	object-fit: cover;
 }
-.columns__content {
+.column__content {
 	position: relative;
 	z-index: 2;
 }
