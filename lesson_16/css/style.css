@@ -38,7 +38,7 @@ body {
 	column-gap: 14px;
 	align-items: center;
 	position: relative;
-	z-index: 5;
+	z-index: 10;
 }
 .logo__image {
 	max-width: 48px;
@@ -69,7 +69,7 @@ body {
 	align-items: center;
 	column-gap: 15px;
 	position: relative;
-	z-index: 5;
+	z-index: 10;
 }
 .button__link {
 	font-size: 14px;
@@ -121,7 +121,7 @@ body {
 		inline-size: 100%;
 		block-size: 100%;
 		transition: inset-inline-start 0.3s;
-		z-index: 2;
+		z-index: 8;
 		overflow: auto;
 		padding: 100px 15px 30px;
 		background-color: #28293E;
@@ -133,7 +133,7 @@ body {
 		inline-size: 100%;
 		inset-inline-start: 100%;
 		inset-block-start: 0;
-		z-index: 3;
+		z-index: 9;
 		background-color: #0f0f0f;
 		transition: inset-inline-start 0.3s;
 	}
