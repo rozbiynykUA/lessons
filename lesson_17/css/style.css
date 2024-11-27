@@ -71,7 +71,7 @@ body {
 	position: relative;
 	z-index: 10;
 }
-.button {
+.btn {
 	font-size: 14px;
 	font-weight: 900;
 	text-transform: uppercase;
@@ -171,7 +171,7 @@ body {
 	.menu__link:hover {
 		text-decoration: underline;
 	}
-	.button:hover {
+	.btn:hover {
 		border: 1px solid rgba(255, 255, 255, 1);
 	} 
 }
