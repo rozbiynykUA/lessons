@@ -1,0 +1,122 @@
+.button {
+	width: fit-content;
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.25rem;
+	background-color: #A53DFF;
+	color: #fff;
+	line-height: 1.5;
+	font-weight: 600;
+	transition: all 0.4s;
+}
+@media (any-hover:hover) {
+	.button:hover {
+		transform: scale(1.05);
+	}
+}
+.button--download {
+	width: fit-content;
+	padding: 0.7rem 1.47rem;
+	border-radius: 0.25rem;
+	border: 0.0625rem solid #A53DFF;
+	background-color: #fff;
+	color: #A53DFF;
+	line-height: 1.5;
+	font-weight: 600;
+	transition: all 0.5s;
+	position: relative;
+}
+.button--download span::before {
+	content: "";
+	width: 1.5rem;
+	height: 1.5rem;
+	transition: all 0.5s;
+	background: url("../img/icon/download.svg") center / 1.5rem no-repeat;
+}
+.button--download span {
+	display: flex;
+	align-items: center;
+	column-gap: 0.75rem;
+}
+.button--light-vector {
+	width: fit-content;
+	padding: 0.7rem 1.47rem;
+	border-radius: 0.25rem;
+	border: 0.0625rem solid #A53DFF;
+	background-color: #fff;
+	color: #A53DFF;
+	line-height: 1.5;
+	font-weight: 600;
+	transition: all 0.5s;
+	position: relative;
+}
+.button--light-vector span {
+	display: flex;
+	align-items: center;
+	column-gap: 0.75rem;
+	transition: all 0.5s;
+}
+.button--light-vector span::after {
+	content: "";
+	width: 1.5rem;
+	height: 1.5rem;
+	transition: all 0.5s;
+	background: url("../img/icon/vector-right.svg") center / 0.75rem no-repeat;
+}
+@media (any-hover:hover) {
+	.button--light-vector:hover {
+		transform: scale(1.05);
+		box-shadow: 0rem 0.125rem 0.1875rem 0.125rem #A53DFF;
+	}
+}
+.button--dark-vector {
+	width: fit-content;
+	padding: 0.7rem 1.47rem;
+	border-radius: 0.25rem;
+	border: 0.0625rem solid #A53DFF;
+	background-color: #A53DFF;
+	color: #fff;
+	line-height: 1.5;
+	font-weight: 600;
+	transition: all 0.5s;
+	position: relative;
+}
+.button--dark-vector span {
+	display: flex;
+	align-items: center;
+	column-gap: 0.75rem;
+	transition: all 0.5s;
+}
+.button--dark-vector span::after {
+	content: "";
+	width: 1.5rem;
+	height: 1.5rem;
+	transition: all 0.5s;
+	background: url("../img/icon/vector-right-white.svg") center / 0.75rem no-repeat;
+}
+@media (any-hover:hover) {
+	.button--dark-vector:hover {
+		transform: scale(1.05);
+	}
+}
+.section-header {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
+}
+.section-header--more-gap {
+	row-gap: 2rem;
+}
+.section-header__title {
+	color: #132238;
+	font-size: 3rem;
+	font-weight: 600;
+	line-height: 1.17;
+}
+.section-header__text {
+	color: #697484;
+	font-size: 1.125rem;
+	line-height: 1.33;
+}
+.section-header__text p:not(:last-child) {
+	margin-bottom: 1rem;
+}
