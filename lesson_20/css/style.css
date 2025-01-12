@@ -515,7 +515,7 @@ body {
 	background: rgba(237, 216, 255, 0.50);
 }
 .component__image--violet {
-	background: #A53DFF;
+	background: #a53dff;
 }
 .component__image:not(:last-child) {
 	margin-bottom: 2rem;
@@ -598,6 +598,7 @@ body {
 }
 .item__image {
 	border-radius: 0.5rem 0.5rem 0rem 0rem;
+	aspect-ratio: 424 / 248;
 	overflow: hidden;
 }
 .item__img {
@@ -749,6 +750,7 @@ body {
 	margin-block-end: 1.5rem;
 }
 .card__image {
+	aspect-ratio: 312 / 226;
 	overflow: hidden;
 }
 .card__img {
@@ -757,7 +759,7 @@ body {
 	object-fit: cover;
 	transition: transform 0.5s;
 }
-.cadr__content {
+.card__content {
 	padding: 1.5rem;
 }
 .blog__card {
@@ -1016,10 +1018,13 @@ body {
 .testimonial__response blockquote:not(:last-child) {
 	margin-block-end: 3.125rem;
 }
-.testimonial__response cite {
+.response__author {
 	color: #000;
 	font-family: "Poppins", serif;
 	font-style: normal;
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5rem;
 }
 .response__name {
 	font-size: 1.125rem;
