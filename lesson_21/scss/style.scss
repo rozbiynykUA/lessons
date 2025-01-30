@@ -9,6 +9,13 @@
 body {
 	font-family: "Manrope", serif;
 	background-color: #141414;
+	opacity: 0;
+	transition: all 1.5s;
+}
+.loaded {
+	body {
+		opacity: 1;
+	}
 }
 .wrapper {
 	min-height: 100%;
@@ -23,6 +30,11 @@ body {
 	max-width: toRem(1626);
 	margin: 0 auto;
 	padding-inline: toRem(15);
+}
+[class *= "page__"]:not(:last-child) {
+	@media (max-width: toEm(699.98)) {
+		margin-block-end: toRem(30);
+	}
 }
 /* ----------------------Header------------------------- */
 .header {
@@ -153,10 +165,12 @@ body {
 			padding: toRem(13) toRem(23);
 			color: #BFBFBF;
 			transition: all 0.4s;
-			&:hover {
-				color: #fff;
-				border: toRem(1) solid #1A1A1A;
-				background-color: #1A1A1A;
+			@media (any-hover:hover) {
+				&:hover {
+					color: #fff;
+					border: toRem(1) solid #1A1A1A;
+					background-color: #1A1A1A;
+				}
 			}
 			@media (max-width: toEm(992)) {
 				font-size: 24px;
@@ -169,6 +183,7 @@ body {
 	border-radius: toRem(8);
 	border: toRem(1) solid #1A1A1A;
 	background-color: #1A1A1A;
+	padding: toRem(10) toRem(20);
 	@media (max-width: toEm(992)) {
 		text-decoration: underline;
 		background-color: transparent;
@@ -183,8 +198,11 @@ body {
 			min-height: toRem(34);
 			aspect-ratio: 34 / 34;
 			transition: transform 0.4s;
-			&:hover {
-				transform: scale(1.15);
+			will-change: transform;
+			@media (any-hover:hover) {
+				&:hover {
+					transform: scale(1.15);
+				}
 			}
 		}
 
@@ -251,7 +269,6 @@ body {
 .hero {
 	padding-block: 5.3125% 6.094%;
 		// .hero__container
-
 		&__container {
 			padding: 1.9625% 1.9625% 0.785% 1.9625%;
 			position: relative;
@@ -317,15 +334,29 @@ body {
 			color: #fff;
 			font-size: toRem(38);
 			font-weight: 700;
-			@include adaptiveValue("font-size", 38, 24)
+			@include adaptiveValue("font-size", 38, 24);
+			transition: all 0.8s;
+			opacity: 0;
+			transform: translate(0, 120%);
+			&._active {
+				opacity: 1;
+				transform: translate(0, 0);
+			}
 		}
-
 		// .column__text
 
 		&__text {
 			color: #999;
 			font-size: toRem(18);
 			font-weight: 500;
+			transition: all 0.8s;
+			opacity: 0;
+			transform: translate(0, 120%);
+			&._active {
+				opacity: 1;
+				transform: translate(0, 0);
+				transition: all 0.8s ease 0.4s;
+			}
 			p:not(:last-child) {
 				margin-block-end: toRem(10);
 			}
@@ -384,9 +415,11 @@ body {
 			border: toRem(1) solid #262626;
 			background-color: #0F0F0F;
 			transition: box-shadow 0.3s;
-			&:hover {
-			box-shadow: toRem(0) toRem(1) toRem(7) toRem(1) #fff;
-		}
+			@media (any-hover:hover) {
+				&:hover {
+					box-shadow: toRem(0) toRem(1) toRem(7) toRem(1) #fff;
+				}
+			}
 		}
 
 		// .actions__icon
@@ -396,6 +429,19 @@ body {
 		}
 }
 .button {
+	color: #fff;
+	font-size: toRem(18);
+	font-weight: 600;
+	line-height: 1.53;
+	padding: toRem(14) toRem(24);
+	border-radius: toRem(8);
+	background-color: #E50000;
+	transition: box-shadow 0.3s;
+	@media (any-hover:hover) {
+		&:hover {
+			box-shadow: toRem(0) toRem(1) toRem(7) toRem(1) #fff;
+		}
+	}
 	span {
 		display: flex;
 		column-gap: toRem(4);
@@ -408,17 +454,6 @@ body {
 			background: url("../img/icon/button-vector-right.svg") center / toRem(28) no-repeat;
 		}
 	}
-	color: #fff;
-	font-size: toRem(18);
-	font-weight: 600;
-	line-height: 1.53;
-	padding: toRem(14) toRem(24);
-	border-radius: toRem(8);
-	background-color: #E50000;
-	transition: box-shadow 0.3s;
-	&:hover {
-			box-shadow: toRem(0) toRem(1) toRem(7) toRem(1) #fff;
-		}
 }
 .scroll {
 	display: flex;
@@ -438,9 +473,12 @@ body {
 			border: toRem(1) solid #1F1F1F;
 			background-color: #0F0F0F;
 			transition: box-shadow 0.3s;
-			&:hover {
-			box-shadow: toRem(0) toRem(1) toRem(7) toRem(1) #fff;
-		}
+			@media (any-hover:hover) {
+				&:hover {
+					box-shadow: toRem(0) toRem(1) toRem(7) toRem(1) #fff;
+				}
+			}
+		
 		}
 
 		// .scroll__page
@@ -552,6 +590,13 @@ body {
 			font-weight: 700;
 			line-height: 1.5;
 			@include adaptiveValue("font-size", 38, 24);
+			transition: all 0.8s;
+			opacity: 0;
+			transform: translate(-200%, 0);
+			&._active {
+				opacity: 1;
+				transform: translate(0, 0);
+			}
 		}
 
 		// .section-header__scroll
@@ -639,9 +684,43 @@ body {
 		&__card {
 		}
 		&__link {
-			&:hover .card {
-				box-shadow: toRem(0) toRem(1) toRem(7) toRem(1) #fff;
+			transform: scale(0);
+			transition: all 1s ease;
+			&._active {
+				transform: scale(1);
+				transition: all 1s ease;
 			}
+			@media (min-width: 81.3125em) {
+				transform: translate(-200%, 0);
+				opacity: 0;
+				transition: all 1s ease;
+				&._active {
+					// transform: scale(1);
+					transform: translate(0, 0);
+					opacity: 1;
+					transition: all 1s ease;
+				}
+				&._active:nth-child(1) {
+					transition: all 1s ease 0s;
+				}
+				&._active:nth-child(2) {
+					transition: all 1s ease 0.2s;
+				}
+				&._active:nth-child(3) {
+					transition: all 1s ease 0.4s;
+				}
+				&._active:nth-child(4) {
+					transition: all 1s ease 0.6s;
+				}
+				&._active:nth-child(5) {
+					transition: all 1s ease 0.8s;
+				}
+			}
+			@media (any-hover:hover) {
+				&:hover .card {
+					box-shadow: toRem(0) toRem(1) toRem(7) toRem(1) #fff;
+				}
+			}	
 		}
 }
 .card {
@@ -679,6 +758,7 @@ body {
 			aspect-ratio: 105 / 123;
 			border-radius: toRem(10);
 			overflow: hidden;
+			background-color: #1A1A1A;
 			img {
 				width: 100%;
 				height: 100%;
@@ -783,6 +863,38 @@ body {
 	border-radius: toRem(12);
 	border: toRem(1) solid #262626;
 	background: #1A1A1A;
+	transform: scale(0);
+			transition: all 1s ease;
+			&._active {
+				transform: scale(1);
+				transition: all 1s ease;
+			}
+			@media (min-width: 81.3125em) {
+				transform: translate(-200%, 0);
+				opacity: 0;
+				transition: all 1s ease;
+				&._active {
+					// transform: scale(1);
+					transform: translate(0, 0);
+					opacity: 1;
+					transition: all 1s ease;
+				}
+				&._active:nth-child(1) {
+					transition: all 1s ease 0s;
+				}
+				&._active:nth-child(2) {
+					transition: all 1s ease 0.2s;
+				}
+				&._active:nth-child(3) {
+					transition: all 1s ease 0.4s;
+				}
+				&._active:nth-child(4) {
+					transition: all 1s ease 0.6s;
+				}
+				&._active:nth-child(5) {
+					transition: all 1s ease 0.8s;
+				}
+			}
 		// .frame__images
 
 		&__images {
@@ -866,8 +978,10 @@ body {
 				height: 100%;
 				object-fit: cover;
 				transition: transform 0.4s;
-				&:hover {
-					transform: scale(1.3);
+				@media (any-hover:hover) {
+					&:hover {
+						transform: scale(1.3);
+					}
 				}
 			}
 			
@@ -918,6 +1032,38 @@ body {
 		// .trending__link
 
 		&__link {
+			transform: scale(0);
+			transition: all 1s ease;
+			&._active {
+				transform: scale(1);
+				transition: all 1s ease;
+			}
+			@media (min-width: 81.3125em) {
+				transform: translate(-200%, 0);
+				opacity: 0;
+				transition: all 1s ease;
+				&._active {
+					// transform: scale(1);
+					transform: translate(0, 0);
+					opacity: 1;
+					transition: all 1s ease;
+				}
+				&._active:nth-child(1) {
+					transition: all 1s ease 0s;
+				}
+				&._active:nth-child(2) {
+					transition: all 1s ease 0.2s;
+				}
+				&._active:nth-child(3) {
+					transition: all 1s ease 0.4s;
+				}
+				&._active:nth-child(4) {
+					transition: all 1s ease 0.6s;
+				}
+				&._active:nth-child(5) {
+					transition: all 1s ease 0.8s;
+				}
+			}
 		}
 
 		// .trending__movie
@@ -928,9 +1074,12 @@ body {
 			border: toRem(1) solid #262626;
 			background: #1A1A1A;
 			transition: box-shadow, transform 0.4s;
-			&:hover {
-				box-shadow: toRem(0) toRem(1) toRem(7) toRem(1) #fff;
-				transform: scale(1.02);
+			will-change: transform;
+			@media (any-hover:hover) {
+				&:hover {
+					box-shadow: toRem(0) toRem(1) toRem(7) toRem(1) #fff;
+					transform: scale(1.02);
+				}
 			}
 		}
 }
@@ -988,6 +1137,7 @@ body {
 			border-radius: toRem(12);
 			overflow: hidden;
 			aspect-ratio: 243 / 281;
+			background: #1A1A1A url("../img/header/logo.svg") center / 70% no-repeat;
 			img {
 				width: 100%;
 				height: 100%;
@@ -1097,6 +1247,38 @@ body {
 		// .releases__link
 
 		&__link {
+			transform: scale(0);
+			transition: all 1s ease;
+			&._active {
+				transform: scale(1);
+				transition: all 1s ease;
+			}
+			@media (min-width: 81.3125em) {
+				transform: translate(-200%, 0);
+				opacity: 0;
+				transition: all 1s ease;
+				&._active {
+					// transform: scale(1);
+					transform: translate(0, 0);
+					opacity: 1;
+					transition: all 1s ease;
+				}
+				&._active:nth-child(1) {
+					transition: all 1s ease 0s;
+				}
+				&._active:nth-child(2) {
+					transition: all 1s ease 0.2s;
+				}
+				&._active:nth-child(3) {
+					transition: all 1s ease 0.4s;
+				}
+				&._active:nth-child(4) {
+					transition: all 1s ease 0.6s;
+				}
+				&._active:nth-child(5) {
+					transition: all 1s ease 0.8s;
+				}
+			}
 		}
 
 		// .releases__poster
@@ -1157,9 +1339,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	row-gap: toRem(20);
-	&:hover {
-		box-shadow: toRem(0) toRem(1) toRem(7) toRem(1) #fff;
-		transform: scale(1.02);
+	will-change: transform;
+	@media (any-hover:hover) {
+		&:hover {
+			box-shadow: toRem(0) toRem(1) toRem(7) toRem(1) #fff;
+			transform: scale(1.02);
+		}
 	}
 		// .poster__image
 
@@ -1217,7 +1402,7 @@ body {
 			}
 			@media (max-width: toEm(596)) {
 				grid-template-columns: repeat(2, 1fr);
-				gap: toRem(15);
+				gap: toRem(50);
 			}
 		}
 
@@ -1276,8 +1461,10 @@ body {
 			color: #999;
 			font-size: toRem(18);
 			font-weight: 500;
-			&:hover {
-				text-decoration: underline;
+			@media (any-hover:hover) {
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 
@@ -1307,8 +1494,11 @@ body {
 			border-radius: toRem(8);
 			border: toRem(1) solid #262626;
 			background-color: #1A1A1A;
-			&:hover .navigations__icon {
-				transform: scale(1.2);
+			will-change: transform;
+			@media (any-hover:hover) {
+				&:hover .navigations__icon {
+					transform: scale(1.2);
+				}
 			}
 		}
 
@@ -1357,8 +1547,10 @@ body {
 				height: toRem(27);
 				background-color: #262626;
 			}
-			&:hover {
-				text-decoration: underline;
+			@media (any-hover:hover) {
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 			@media (max-width: toEm(441.98)) {
 				&:nth-of-type(2)::after {
